@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-color: rgba(38, 192, 227, 0.238);
+    background-color: rgba(7, 180, 41, 0.238);
 }
 
 header {
@@ -24,7 +24,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0.25turn, #3f87a600, rgba(38, 192, 227, 0.562), #f69c3c00);
+    background: linear-gradient(0.25turn, #3f87a600, rgba(7, 180, 41, 0.238), #f69c3c00);
 }
 
 #link {
