@@ -1,0 +1,33 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(38, 192, 227, 0.238);
+}
+
+header {
+    height: 200px;
+    width: 100%;
+    background-color: forestgreen;
+    font-family: Calibri;
+    font-weight:900;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0.25turn, #3f87a600, rgba(38, 192, 227, 0.562), #f69c3c00);
+}
+
+#link {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,42 @@
+﻿@* <h1>Home page</h1>
+<h1><a href="/products">products</a></h1> *@
+@using Microsoft.AspNetCore.Identity
+
+@{
+	Layout = "_Layout";
+}
+
+
+@if (User.Identity.IsAuthenticated)
+{
+<div>
+		<div style="text-align: center; color: red;">
+			<h3>Hello, @User.Identity.Name</h3>
+		</div>
+		<div style="text-align: center; font-size: 40px;">
+			<a href="/Products/Index" class="alert-link">PRODUCTS</a>
+		</div>
+		<div style="text-align: center; padding-top:50px; padding-bottom:30px;">
+			<form action="User/LogOut" method="post">
+				<button type="submit" class="btn btn-danger">EXIT</button>
+			</form>
+		</div>
+
+		
+		
+</div>
+	
+}
+else
+{
+	<div>
+		<h1>Navigation</h1>
+
+		<a href="/" class="btn btn-primary">MAIN</a>
+		<a href="/user/Register" class="btn btn-secondary">REGISTER</a>
+		<a href="/user/Auth" class="btn btn-success">AUTH</a>
+
+	</div>
+	
+	
+}

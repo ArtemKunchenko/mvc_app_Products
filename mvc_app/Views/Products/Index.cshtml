@@ -1,0 +1,37 @@
+﻿@model IEnumerable<mvc_app.Models.Product>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="text-align: center;">
+	<h1>PRODUCTS</h1>
+	<p>
+		<a href="@Url.Action("Create")" class="btn btn-primary">Create new product</a>
+	</p>
+</div>
+
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Tools</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Description</td>
+                <td>
+                    <a href="@Url.Action("Update", new {id = product.Id})" class="btn btn-warning">Update</a>
+                    <a href="@Url.Action("Details", new {id = product.Id})" class="btn btn-info">Details</a>
+                    <a href="@Url.Action("Delete", new {id = product.Id})" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

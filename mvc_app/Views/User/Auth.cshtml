@@ -1,0 +1,15 @@
+﻿@* @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers *@
+
+@{
+	Layout = "_Layout";
+}
+
+<h3>Page auth</h3>
+
+<form action="Auth" method="post" class="form-group" >
+	<label for="email" class="control-label">Email:</label>
+	<input type="email" id="email" name="email" required class="form-control" />
+	<label for="password" class="control-label">Password:</label>
+	<input type="password" id="password" name="password" required class="form-control" />
+	<button type="submit" value="register" class="btn btn-primary">SUBMIT</button>
+</form>
