@@ -5,7 +5,11 @@
 <div style="text-align: center;">
 	<h1>PRODUCTS</h1>
 	<p>
-		<a href="@Url.Action("Create")" class="btn btn-primary">Create new product</a>
+        @if (User.IsInRole("admin"))
+        {
+            <a href="@Url.Action("Create")" class="btn btn-primary">Create new product</a>
+        }
+        
 	</p>
 </div>
 
@@ -27,9 +31,17 @@
                 <td>@product.Price</td>
                 <td>@product.Description</td>
                 <td>
-                    <a href="@Url.Action("Update", new {id = product.Id})" class="btn btn-warning">Update</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a href="@Url.Action("Update", new {id = product.Id})" class="btn btn-warning">Update</a>
+                    }
+                   
                     <a href="@Url.Action("Details", new {id = product.Id})" class="btn btn-info">Details</a>
-                    <a href="@Url.Action("Delete", new {id = product.Id})" class="btn btn-danger">Delete</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a href="@Url.Action("Delete", new {id = product.Id})" class="btn btn-danger">Delete</a>
+                    }
+                    
                 </td>
             </tr>
         }
